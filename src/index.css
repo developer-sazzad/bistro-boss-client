@@ -1,2 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+.bistro-boss{
+    background-image: url('../src/assets/home/chef-service.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+}
