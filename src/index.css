@@ -3,7 +3,10 @@
 
 
 .active{
-    text-decoration: underline;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-color: #fff;
+    border-style: solid;
 }
 .bistro-boss{
     background-image: url('../src/assets/home/chef-service.jpg');
