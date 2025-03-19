@@ -18,28 +18,34 @@ const Category = () => {
             ></SectionTitle>
             <div className="py-10">
                 <Swiper
-                    slidesPerView={4}
-                    spaceBetween={5}
+                    spaceBetween={30}
                     pagination={{
                         clickable: true,
                     }}
+                    breakpoints={{
+                        320: { slidesPerView: 1 },  // Mobile
+                        640: { slidesPerView: 2 },  // Tablets
+                        1024: { slidesPerView: 3 }, // Laptops
+                        1264: { slidesPerView: 4 }, // Laptops
+                    }}
+                    
                     modules={[Pagination]}
                     className="mySwiper"
                 >
                     <SwiperSlide>
-                        <img src={categorySlide1} alt="" />
+                        <img className="h-96 w-full" src={categorySlide1} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={categorySlide2} alt="" />
+                        <img className="h-96 w-full" src={categorySlide2} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={categorySlide3} alt="" />
+                        <img className="h-96 w-full" src={categorySlide3} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={categorySlide4} alt="" />
+                        <img className="h-96 w-full" src={categorySlide4} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={categorySlide5} alt="" />
+                        <img className="h-96 w-full" src={categorySlide5} alt="" />
                     </SwiperSlide>
                 </Swiper>
             </div>

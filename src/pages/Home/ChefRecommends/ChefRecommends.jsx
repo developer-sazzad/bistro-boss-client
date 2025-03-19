@@ -28,7 +28,7 @@ const ChefRecommends = () => {
                 heading='Chef Recommends'
                 subHeading='Should Try'
             ></SectionTitle>
-            <div>
+            <div className="md:my-10">
                 <Swiper
                     spaceBetween={30}
                     pagination={{

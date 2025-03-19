@@ -8,3 +8,10 @@
     background-size: cover;
     background-position: left top;
 }
+
+.featured-background{
+    background: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.747)), 
+    url('../src/assets/home/featured.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
