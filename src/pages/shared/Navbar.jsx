@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [scrolling, setScrolling] = useState(false);
     const navOptions = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>Home</Link></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/menu'>Menu</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
        
     </>
 

@@ -2,6 +2,9 @@
 @plugin "daisyui";
 
 
+.active{
+    text-decoration: underline;
+}
 .bistro-boss{
     background-image: url('../src/assets/home/chef-service.jpg');
     background-repeat: no-repeat;
