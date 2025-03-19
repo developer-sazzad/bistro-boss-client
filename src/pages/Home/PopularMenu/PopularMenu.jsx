@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SectionTitle from "../../../components/sectionTitle";
 import MenuItem from "../../shared/MenuItem";
+import CustomButton from "../../../components/CustomButton";
 
 const PopularMenu = () => {
     const [menu, setMenu] = useState([]);
@@ -28,9 +29,9 @@ const PopularMenu = () => {
                     ></MenuItem>)
                 }
             </div>
-            <div className="text-center mt-16">
-                <button className="btn btn-outline btn-lg btn-warning border-1 border-b-4">View Full Menu</button>
-            </div>
+            <CustomButton
+                buttonText='View Full Menu'
+            ></CustomButton>
         </div>
     );
 };
