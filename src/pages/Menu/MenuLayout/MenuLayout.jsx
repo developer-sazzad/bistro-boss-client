@@ -17,7 +17,11 @@ const MenuLayout = () => {
     const soup = menu.filter(item => item.category === 'soup')
     return (
         <div>
-            <TopCover topCoverImg={topCoverImg} topCoverTitle='Our Menu'></TopCover>
+            <TopCover
+                topCoverImg={topCoverImg}
+                topCoverTitle='Our Menu'
+                topCoverDescription="Would you like to try a dish?"
+            ></TopCover>
             <SectionTitle subHeading="Don't Miss" heading="today's offer"></SectionTitle>
             <MenuCategory
                 items={offered}
@@ -26,25 +30,25 @@ const MenuLayout = () => {
             <MenuCategory
                 items={dessert}
                 coverImg={dessertCoverImg}
-                coverTitle='desserts'
+                coverTitle='dessert'
                 buttonText='ORDER YOUR FAVOURITE FOOD'
             ></MenuCategory>
             <MenuCategory
                 items={pizza}
                 coverImg={pizzaCoverImg}
-                coverTitle='pizzas'
+                coverTitle='pizza'
                 buttonText='ORDER YOUR FAVOURITE FOOD'
             ></MenuCategory>
             <MenuCategory
                 items={salad}
                 coverImg={saladCoverImg}
-                coverTitle='salads'
+                coverTitle='salad'
                 buttonText='ORDER YOUR FAVOURITE FOOD'
             ></MenuCategory>
             <MenuCategory
                 items={soup}
                 coverImg={soupCoverImg}
-                coverTitle='soups'
+                coverTitle='soup'
                 buttonText='ORDER YOUR FAVOURITE FOOD'
             ></MenuCategory>
         </div>

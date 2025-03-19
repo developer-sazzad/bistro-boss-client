@@ -1,5 +1,4 @@
-const TabsDetails = ({ item }) => {
-    // console.log('tab items', items)
+const OrderCard = ({ item }) => {
     return (
         <div className="card shadow-md">
             <figure>
@@ -14,10 +13,10 @@ const TabsDetails = ({ item }) => {
                     <button className="btn btn-outline btn-warning px-10 border-1 border-b-4">
                         Add to Card
                     </button>
-                </div>
+                </div>   
             </div>
         </div>
     );
 };
 
-export default TabsDetails;
+export default OrderCard;

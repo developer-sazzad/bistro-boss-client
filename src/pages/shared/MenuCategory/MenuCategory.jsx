@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import CustomButton from "../../../components/CustomButton";
 import MenuItem from "../MenuItem";
 import Cover from './../Cover/Cover';
 
-const MenuCategory = ({items, coverTitle, coverImg, buttonText}) => {
+const MenuCategory = ({ items, coverTitle, coverImg, buttonText }) => {
     return (
         <div className="py-10 mb-10">
             {coverTitle && <Cover coverImg={coverImg} coverTitle={coverTitle}></Cover>}
@@ -14,7 +15,9 @@ const MenuCategory = ({items, coverTitle, coverImg, buttonText}) => {
                     ></MenuItem>)
                 }
             </div>
-            <CustomButton buttonText={buttonText}></CustomButton>
+            <Link to={`/order/${coverTitle}`}>
+                <CustomButton buttonText={buttonText}></CustomButton>
+            </Link>
         </div>
     );
 };

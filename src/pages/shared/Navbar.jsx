@@ -6,8 +6,8 @@ const Navbar = () => {
     const navOptions = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/our-menu'>Menu</NavLink></li>
-        <li><NavLink to='/our-food'>Food</NavLink></li>
-
+        <li><NavLink to='/order/salad'>Order Food</NavLink></li>
+        <li><NavLink to='/contact-us'>Contact</NavLink></li>
     </>
 
 
