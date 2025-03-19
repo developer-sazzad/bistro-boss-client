@@ -5,9 +5,9 @@ const Navbar = () => {
     const [scrolling, setScrolling] = useState(false);
     const navOptions = <>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/menu'>Menu</NavLink></li>
-        <li><NavLink to='/'>Home</NavLink></li>
-       
+        <li><NavLink to='/our-menu'>Menu</NavLink></li>
+        <li><NavLink to='/our-food'>Food</NavLink></li>
+
     </>
 
 
