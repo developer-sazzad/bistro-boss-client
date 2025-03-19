@@ -1,7 +1,7 @@
 const TabsDetails = ({ item }) => {
     // console.log('tab items', items)
     return (
-        <div className="card shadow-md my-5 md:mb-12">
+        <div className="card shadow-md">
             <figure>
                 <img className="w-full h-[200px]"
                     src={item.image}

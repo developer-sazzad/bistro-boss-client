@@ -25,7 +25,7 @@ const FoodTabs = () => {
                     </TabList>
                 </div>
                 <TabPanel>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {
                             salad.map(item => <TabsDetails
                                 key={item._id}
@@ -34,7 +34,7 @@ const FoodTabs = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {
                             pizza.map(item => <TabsDetails
                                 key={item._id}
@@ -43,7 +43,7 @@ const FoodTabs = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {
                             soup.map(item => <TabsDetails
                                 key={item._id}
@@ -52,7 +52,7 @@ const FoodTabs = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {
                             dessert.map(item => <TabsDetails
                                 key={item._id}
@@ -61,7 +61,7 @@ const FoodTabs = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {
                             drinks.map(item => <TabsDetails
                                 key={item._id}
@@ -69,7 +69,6 @@ const FoodTabs = () => {
                         }
                     </div>
                 </TabPanel>
-
             </Tabs>
         </div>
     );
