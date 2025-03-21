@@ -22,4 +22,6 @@
     background-size: cover;
 }
 
-/* Food Page Tabs */
+.login-background{
+    background-image: url('../src/assets/others/authentication.png');
+}
