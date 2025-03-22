@@ -4,6 +4,8 @@ import loginLottie from '../../assets/others/login-image.json'
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from "react-router-dom";
+import SocialLogin from "../SocialLogin/SocialLogin";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
     const captchaRef = useRef(null);
@@ -17,7 +19,7 @@ const Login = () => {
         console.log(captchaValue)
         if (validateCaptcha(captchaValue)) {
             console.log('Hello')
-        }else{
+        } else {
             console.log('Wrong')
         }
     }
@@ -31,10 +33,10 @@ const Login = () => {
         console.log(email, password);
     }
     return (
-        <div className="login-background min-w-full h-screen  flex  items-center">
-            <div className="md:flex border-1 items-center justify-between border-gray-300 w-full mx-20 my-10 shadow-2xl px-10 lg:px-24 py-5">
+        <div className="login-background min-w-full min-h-screen  flex  items-center">
+            <div className="md:flex flex-row-reverse border-1 items-center justify-between border-gray-300 w-full mx-20 my-10 shadow-2xl px-10 lg:px-24 py-10">
                 <div className='flex-1'>
-                <Lottie animationData={loginLottie} loop={true} />;
+                    <Lottie animationData={loginLottie} loop={true} />;
                 </div>
                 <div className='flex-1 flex flex-col justify-center items-center'>
                     <h2 className='text-3xl font-bold text-center '>Login</h2>
@@ -63,7 +65,12 @@ const Login = () => {
 
                         <input type="submit" className='btn w-full mt-5 btn-warning' value="Login" />
                     </form>
-
+                    <div className="pt-5 text-center">
+                        <p>New here?
+                            <Link to='/register' className="font-bold text-orange-400"> Create a New Account!</Link>
+                        </p>
+                        <SocialLogin></SocialLogin>
+                    </div>
                 </div>
             </div>
         </div>

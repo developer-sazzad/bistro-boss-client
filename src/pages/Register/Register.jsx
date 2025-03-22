@@ -5,6 +5,7 @@ import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from "react-router-dom";
+import SocialLogin from "../SocialLogin/SocialLogin";
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false)
     const captchaRef = useRef(null);
@@ -18,7 +19,7 @@ const Register = () => {
         console.log(captchaValue)
         if (validateCaptcha(captchaValue)) {
             console.log('Hello')
-        }else{
+        } else {
             console.log('Wrong')
         }
     }
@@ -33,22 +34,22 @@ const Register = () => {
         console.log(name, email, password);
     }
     return (
-        <div className="login-background min-w-full h-screen  flex  items-center">
-            <div className="md:flex flex-row-reverse border-1 items-center justify-between border-gray-300 w-full mx-20 my-10 shadow-2xl px-10 lg:px-24 py-5">
-                <div className='flex-1'>
-                <Lottie animationData={registerLottie} loop={true} />;
+        <div className="login-background min-w-full min-h-screen  flex  items-center">
+            <div className="md:flex flex-row-reverse border-1 items-center justify-between border-gray-300 w-full mx-20 my-10 shadow-2xl px-10 lg:px-24 py-10">
+                <div className='flex-1 flex justify-center'>
+                    <Lottie style={{width: '80%'}} animationData={registerLottie} loop={true} />;
                 </div>
                 <div className='flex-1 flex flex-col justify-center items-center'>
                     <h2 className='text-3xl font-bold text-center '>Create an a Account !!</h2>
                     <form onSubmit={handleLogin} className='**:focus:outline-none w-full'>
                         <legend>Name</legend>
-                        <input type="text" placeholder='Enter your Name' className='input input-md w-full' name="name" />
-                       
-                       
-                        <legend className="mt-5">Email</legend>
-                        <input type="email" placeholder='Enter your Email' className='input input-md w-full' name="email" />
+                        <input type="text" placeholder='Enter your Name' className='input w-full' name="name" />
 
-                        <legend className='mt-5'>Password</legend>
+
+                        <legend className="mt-3">Email</legend>
+                        <input type="email" placeholder='Enter your Email' className='input w-full' name="email" />
+
+                        <legend className='mt-3'>Password</legend>
                         <div className="w-full relative">
                             <input
                                 type={showPassword ? 'text' : 'password'}
@@ -62,19 +63,18 @@ const Register = () => {
                                 }
                             </button>
                         </div>
-                        <div className="w-full mt-5">
+                        <div className="w-full mt-3">
                             <LoadCanvasTemplate />
-                            <input type='text' ref={captchaRef} className='input w-full' placeholder="Enter your Password" />
+                            <input type='text' ref={captchaRef} className='input w-full' placeholder="Type the Captcha" />
                         </div>
 
                         <input type="submit" className='btn w-full mt-5 btn-warning' value="Register" />
                     </form>
-                    <div className="text-center mt-5">
-                        <p>Already registered? <Link to='/login'>Go to Login</Link></p>
-                        <p>Or sign up with</p>
-                        <div>
-                            <p></p>
-                        </div>
+                    <div className="pt-5 text-center">
+                        <p>Already registered? 
+                            <Link to='/login' className="font-bold text-orange-400"> Login your Account!</Link>
+                        </p>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
