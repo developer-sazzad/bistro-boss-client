@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import loginLottie from '../../assets/others/login-image.json'
+import registerLottie from '../../assets/others/registerLottie.json'
 
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
@@ -36,7 +36,7 @@ const Register = () => {
         <div className="login-background min-w-full h-screen  flex  items-center">
             <div className="md:flex flex-row-reverse border-1 items-center justify-between border-gray-300 w-full mx-20 my-10 shadow-2xl px-10 lg:px-24 py-5">
                 <div className='flex-1'>
-                <Lottie animationData={loginLottie} loop={true} />;
+                <Lottie animationData={registerLottie} loop={true} />;
                 </div>
                 <div className='flex-1 flex flex-col justify-center items-center'>
                     <h2 className='text-3xl font-bold text-center '>Create an a Account !!</h2>
